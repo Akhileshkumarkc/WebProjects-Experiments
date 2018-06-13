@@ -1,0 +1,26 @@
+.jumbotron{
+	padding-left:10px;
+	position:relative;
+	text-align: center
+	margin:10px;
+	border:10px;
+
+
+}
+.panel panel-primary{
+	width: 300px;
+	position:relative;
+	text-align: left
+}
+
+button.list-group-item{
+	color:red;
+}
+#main{
+}
+
+
+.changeBlueRed{
+	background : blue;
+	color : red;
+}
