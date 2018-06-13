@@ -7,4 +7,6 @@ A sample repository for all web experiments:
 to learn :
 1. BootStrap3 - Carrosuel, JButtons,Panel.
 2. JQuery - Animations.
-3
+
+2) XML XSD XPATH.
+	Created a simple Product and Company XSD and XML to experiment with XPATH Queries.
