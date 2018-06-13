@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Display Products in HTML Table.</title>
+			<meta charset = "UTF-8">
+				<style>
+					table,th,td{
+					border:2px black solid;
+					border-collapse:collapse;
+					}
+			   </style>
+      <script>
+        function DisplayTable()
+        {
+          parser=new DOMParser();
+
+          if (window.XMLHttpRequest){
+            xmlhttp=new XMLHttpRequest();
+          }
+          else {
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          
+          xmlhttp.open("GET","file:///C:/xml/loadXMLFromFile/product.xml",false);
+          xmlhttp.send();
+          xmlDoc = xmlhttp.responseXML;
+
+		      var producttable="<tr><th>Product Name </th>" +
+                           "<th>Product Description </th>" +
+                           "<th>Release Date </th>" +
+                           "<th>Product Cost </th>" +
+                           "<th>Currency </th>" +
+                           "<th>Company Name </th>" +
+                           "<th>Street Name </th>" +
+                           "<th>City </th>" +
+                           "<th>Zipcode </th>" +
+                           "<th>Country </th></tr>";
+		       var x = xmlDoc.getElementsByTagName("ProductInformation");
+
+		      for (i = 0; i < x.length; i++) {
+            producttable += 
+            "<tr>" +
+               "<td>"+x[i].getElementsByTagName("ProductName")[0].childNodes[0].nodeValue +"</td>" +
+               "<td>"+x[i].getElementsByTagName("ProductDescription")[0].childNodes[0].nodeValue + "</td>" +
+               "<td>"+x[i].getElementsByTagName("ProductReleaseDate")[0].childNodes[0].nodeValue + "</td>" +
+  		         "<td>"+x[i].getElementsByTagName("ProductCost")[0].childNodes[0].nodeValue + "</td>" +
+        		   "<td>"+ x[i].getElementsByTagName("ProductCost")[0].getAttribute("currency") + "</td>" +
+        		   "<td>"+ x[i].getElementsByTagName("CompanyName")[0].childNodes[0].nodeValue + "</td>" +
+        		   "<td>"+ x[i].getElementsByTagName("StreetName")[0].childNodes[0].nodeValue + "</td>" +
+               "<td>"+ x[i].getElementsByTagName("City")[0].childNodes[0].nodeValue+ "</td>" +
+        		   "<td>"+ x[i].getElementsByTagName("Zipcode")[0].childNodes[0].nodeValue + "</td>" +
+        		   "<td>" + x[i].getElementsByTagName("Country")[0].childNodes[0].nodeValue + "</td>"+ 
+      		  "</tr>";
+		      }
+           document.getElementById("ProductTable").innerHTML = producttable;
+
+           var companytable="<tr><th>CompanyName</th>" +
+                           "<th>StreetName </th>" +
+                           "<th>City</th>" +
+                           "<th>Zipcode </th>" +
+                           "<th>Country </th></tr>";
+            var y = xmlDoc.getElementsByTagName("CompanyInformation");
+            for (i = 0; i < 4; i++) {
+            companytable += 
+            "<tr>" +
+               "<td>"+y[i].getElementsByTagName("CompanyName")[0].childNodes[0].nodeValue +"</td>" +
+               "<td>"+y[i].getElementsByTagName("StreetName")[0].childNodes[0].nodeValue + "</td>" +
+               "<td>"+y[i].getElementsByTagName("City")[0].childNodes[0].nodeValue + "</td>" +
+               "<td>"+y[i].getElementsByTagName("Zipcode")[0].childNodes[0].nodeValue + "</td>" +
+               "<td>"+y[i].getElementsByTagName("Country")[0].childNodes[0].nodeValue + "</td>" +
+            "</tr>";
+          }
+           document.getElementById("CompanyTable").innerHTML = companytable;
+        }
+      </script>
+    </head>
+  <body>
+    <button onclick="DisplayTable()">click to display the list
+    </button>
+    <h1 id="h1"> Table Data in the XML</h1> <br>
+    <div id="Main Division">
+      <h2> Product Table</h2>
+      <table id="ProductTable">
+       </table>
+       <h2>Company Table</h2>
+	   <table id ="CompanyTable">
+       </table>
+    </div>
+	
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2a</title>
+	<style>
+		.border{
+			border:1px solid black;
+			border-collapse: collapse;
+		}
+		.border th,td{
+			border:1px solid black;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var xmlPage = document.implementation && document.implementation.createDocument ? document.implementation.createDocument("","doc", null):new ActiveXObject("Microsoft.XMLDOM");
+		xmlPage.async = false;
+		xmlPage.load('product.xml');
+//question 1
+		document.write("Question 1 : Total cost of all the products created by companies from the same country <br/>");
+		document.write("Answer 1<hr/>");
+		document.write("xpath expression is :<br/>");
+		document.write("xpath = '//ProductInformation/CompanyInformation/CompanyAddress/Country '</br>");
+		document.write("xpath = 'sum(//ProductInformation[CompanyInformation/CompanyAddress/Country='UNITED STATES']/ProductCost/text()) '</br>");
+		document.write("<table class=\"border\"><tr><th>Country</th><th>sum</th></tr>");
+		xpath1 = '//ProductInformation/CompanyInformation/CompanyAddress/Country ';
+		xpath2p1 = 'sum(//ProductInformation[CompanyInformation/CompanyAddress/Country =';
+		xpath2p2 = ']/ProductCost/text())';
+
+		var p1 = xmlPage.evaluate(xpath1, xmlPage, null, XPathResult.ANY_TYPE, null);
+		var title1 = p1.iterateNext();
+
+		while(title1){
+			document.write("<tr><td>"+title1.childNodes[0].nodeValue+"</td>");
+			var xpath2 = xpath2p1+"'"+title1.childNodes[0].nodeValue+"'"+xpath2p2;
+			var p2 = xmlPage.evaluate(xpath2, xmlPage, null, XPathResult.ANY_TYPE, null);
+			//var title2 = p2.iterateNext();
+			//document.write("<td>"+title2.childNodes[0].nodeValue+"</td>");	
+			document.write("<td>"+p2.numberValue+"</td>");
+			title1 = p1.iterateNext();
+			document.write("</tr>")
+		}	
+		document.write("</table><hr/>");
+
+
+//question 2
+		document.write("Question 2 : Product name, description, and release date of all products that cost more than 25 Dollars but less than 100 Dollars<br/>");
+		document.write("Answer 2<hr/>");
+		document.write("xpath expression is :<br/>");
+		document.write("xpath = '//ProductInformation[ProductCost>25  and ProductCost<100] /ProductName| //ProductInformation[ProductCost>25  and ProductCost<100] /ProductDescription | //ProductInformation[ProductCost>25  and ProductCost<100] /ProductReleaseDate'</br>");
+		document.write("<table class=\"border\"><tr><th>Product Name</th><th>Description</th><th>Release Date</th></tr>");
+		xpath = '//ProductInformation[ProductCost>25  and ProductCost<100] /ProductName| //ProductInformation[ProductCost>25  and ProductCost<100] /ProductDescription | //ProductInformation[ProductCost>25  and ProductCost<100] /ProductReleaseDate';
+		var p1 = xmlPage.evaluate(xpath, xmlPage, null, XPathResult.ANY_TYPE, null);
+		var title1 = p1.iterateNext();
+
+		while(title1){
+			document.write("<tr><td>"+title1.childNodes[0].nodeValue+"</td>");
+			title1 = p1.iterateNext();
+			document.write("<td>"+title1.childNodes[0].nodeValue+"</td>");
+			title1 = p1.iterateNext();
+			document.write("<td>"+title1.childNodes[0].nodeValue+"</td></tr>");
+			title1 = p1.iterateNext();
+		}
+		document.write("</tr></table><hr/>");
+
+
+//question 3
+		document.write("Name and Address of the company that have published atleast one product after 2010<br/>");
+		document.write("Answer 3<br/>");
+		document.write("xpath expression is :<br/>");
+		document.write("//ProductInformation[(number(substring(ProductReleaseDate,1,4))) > 2010]/CompanyInformation/(CompanyName|CompanyAddress/StreetName|CompanyAddress/City|CompanyAddress/Zipcode|CompanyAddress/Country)<br/>");
+		document.write("<table class=\"border\"><tr><th>Company Name</th><th>StreetName</th><th>City</th><th>Zipcode</th><th>Country</th</tr>");
+
+		xpath="//ProductInformation[(number(substring(ProductReleaseDate,1,4))) > 2010]/CompanyInformation/(CompanyName|CompanyAddress/StreetName|CompanyAddress/City|CompanyAddress/Zipcode|CompanyAddress/Country)";
+		p1 = xmlPage.evaluate(xpath, xmlPage, null, XPathResult.ANY_TYPE, null);
+		var x1 = p1.iterateNext();
+		var dummy ="";
+		while(x1){
+		
+			document.write("<tr>");
+			//1 companyname
+			document.write("<td>"+x1.childNodes[0].nodeValue+"</td>");
+			x1 =p1.iterateNext();
+			//2 StreetName
+			document.write("<td>"+x1.childNodes[0].nodeValue+" </td>");
+			x1 = p1.iterateNext();
+			//3 City
+			document.write("<td>"+x1.childNodes[0].nodeValue+" </td>");
+			x1 = p1.iterateNext();
+			//4 Zipcode
+			document.write("<td>"+x1.childNodes[0].nodeValue+" </td>");
+			x1 = p1.iterateNext();
+			//5  Country
+			document.write("<td>"+x1.childNodes[0].nodeValue+" </td>");
+			document.write("</tr>");
+			//reset to nextcompany
+			x1 = p1.iterateNext();
+		}	
+		document.write("</table>");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<CompanyInformation>
+		<CompanyName>SAP</CompanyName>
+		<CompanyAddress>
+			<StreetName>105_Street</StreetName>
+			<City>Walldorf</City>
+			<Zipcode>57575</Zipcode>
+			<Country>GERMANY</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+	<CompanyInformation>
+		<CompanyName>INFOSYS</CompanyName>
+		<CompanyAddress>
+			<StreetName>101_Street</StreetName>
+			<City>Bangalore</City>
+			<Zipcode>56006</Zipcode>
+			<Country>INDIA</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+	<CompanyInformation>
+		<CompanyName>Oracle</CompanyName>
+		<CompanyAddress>
+			<StreetName>103_Street</StreetName>
+			<City>PaloAlto</City>
+			<Zipcode>94065</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+	<CompanyInformation>
+		<CompanyName>MICROSOFT</CompanyName>
+		<CompanyAddress>
+			<StreetName>102_Street</StreetName>
+			<City>Seattle</City>
+			<Zipcode>98101</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+	<ProductInformation>
+		<ProductName>Hana</ProductName>
+		<ProductDescription>An In Memory Database</ProductDescription>
+		<ProductReleaseDate>2014-10-10</ProductReleaseDate>
+		<ProductCost currency="USD">30</ProductCost>
+		<CompanyInformation>
+			<CompanyName>SAP</CompanyName>
+			<CompanyAddress>
+				<StreetName>105_Street</StreetName>
+				<City>Walldorf</City>
+				<Zipcode>57575</Zipcode>
+				<Country>GERMANY</Country>
+			</CompanyAddress>
+		</CompanyInformation>
+	</ProductInformation>
+	
+	<ProductInformation>
+	<ProductName>Srm</ProductName>
+	<ProductDescription>Supplier Relationship Mangement</ProductDescription>
+	<ProductReleaseDate>2012-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">40</ProductCost>
+	<CompanyInformation>
+		<CompanyName>SAP</CompanyName>
+		<CompanyAddress>
+			<StreetName>105_Street</StreetName>
+			<City>Walldorf</City>
+			<Zipcode>57575</Zipcode>
+			<Country>GERMANY</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Crm</ProductName>
+	<ProductDescription>Customer Relationship Mangement</ProductDescription>
+	<ProductReleaseDate>2010-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">50</ProductCost>
+	<CompanyInformation>
+		<CompanyName>SAP</CompanyName>
+		<CompanyAddress>
+			<StreetName>105_Street</StreetName>
+			<City>Walldorf</City>
+			<Zipcode>57575</Zipcode>
+			<Country>GERMANY</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Oracledb</ProductName>
+	<ProductDescription>Oracle database</ProductDescription>
+	<ProductReleaseDate>2013-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">50</ProductCost>
+	<CompanyInformation>
+		<CompanyName>Oracle</CompanyName>
+		<CompanyAddress>
+			<StreetName>103_Street</StreetName>
+			<City>PaloAlto</City>
+			<Zipcode>94065</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Nosqldb</ProductName>
+	<ProductDescription>No Sql database</ProductDescription>
+	<ProductReleaseDate>2014-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">60</ProductCost>
+	<CompanyInformation>
+		<CompanyName>Oracle</CompanyName>
+		<CompanyAddress>
+			<StreetName>103_Street</StreetName>
+			<City>PaloAlto</City>
+			<Zipcode>94065</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Java</ProductName>
+	<ProductDescription>JDK Program</ProductDescription>
+	<ProductReleaseDate>2000-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">100</ProductCost>
+	<CompanyInformation>
+		<CompanyName>Oracle</CompanyName>
+		<CompanyAddress>
+			<StreetName>103_Street</StreetName>
+			<City>PaloAlto</City>
+			<Zipcode>94065</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Azure</ProductName>
+	<ProductDescription>Cloud product</ProductDescription>
+	<ProductReleaseDate>2015-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">120</ProductCost>
+	<CompanyInformation>
+		<CompanyName>MICROSOFT</CompanyName>
+		<CompanyAddress>
+			<StreetName>102_Street</StreetName>
+			<City>Seattle</City>
+			<Zipcode>98101</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Word</ProductName>
+	<ProductDescription>Cloud product</ProductDescription>
+	<ProductReleaseDate>2000-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">10</ProductCost>
+	<CompanyInformation>
+		<CompanyName>MICROSOFT</CompanyName>
+		<CompanyAddress>
+			<StreetName>102_Street</StreetName>
+			<City>Seattle</City>
+			<Zipcode>98101</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>PowerPoint</ProductName>
+	<ProductDescription>Cloud product</ProductDescription>
+	<ProductReleaseDate>2005-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">10</ProductCost>
+	<CompanyInformation>
+		<CompanyName>MICROSOFT</CompanyName>
+		<CompanyAddress>
+			<StreetName>102_Street</StreetName>
+			<City>Seattle</City>
+			<Zipcode>98101</Zipcode>
+			<Country>UNITED STATES</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+    
+    <ProductInformation>
+	<ProductName>Service</ProductName>
+	<ProductDescription>Infosys Service</ProductDescription>
+	<ProductReleaseDate>2001-10-10</ProductReleaseDate>
+	<ProductCost currency="USD">200</ProductCost>
+	<CompanyInformation>
+		<CompanyName>INFOSYS</CompanyName>
+		<CompanyAddress>
+			<StreetName>101_Street</StreetName>
+			<City>Bangalore</City>
+			<Zipcode>56006</Zipcode>
+			<Country>INDIA</Country>
+		</CompanyAddress>
+	</CompanyInformation>
+    </ProductInformation>
+
+</root>
